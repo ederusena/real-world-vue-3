@@ -11,11 +11,11 @@ import EventService from '@/services/EventService.js'
 export default {
   name: 'EventList',
   components: {
-    EventCard
+    EventCard,
   },
   data() {
     return {
-      events: null
+      events: null,
     }
   },
   created() {
@@ -23,13 +23,13 @@ export default {
       // .get(
       //   'https://my-json-server.typicode.com/Code-Pop/Real-World_Vue-3/events'
       // )
-      .then(response => {
+      .then((response) => {
         this.events = response.data
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error)
       })
-  }
+  },
 }
 </script>
 
